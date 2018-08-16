@@ -7,7 +7,7 @@ This project runs on NodeJS using modern JavaScript. [Node](https://nodejs.org/)
 
 ### Running this app
 - Navigate to the directory where you intend to run this application
-- Clone the repository: `git clone this-repository-name`
+- Clone the repository: `git@github.com:Moombai/apis-rock.git`
 - Install the project dependencies at the project root with: `npm install`
 
 ### Available commands
