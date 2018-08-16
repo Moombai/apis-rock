@@ -1,6 +1,24 @@
 
 const axios = require('axios');
+const processArguments = process.argv;
 
+// run functions based on arguments from the command line
+switch (processArguments[2]) {
+  case "most_sold":
+    console.log("running the most sold function...");
+    getPurchases();
+    break;
+  case "total_spend":
+    console.log("running the total spend function...");
+    totalSpend(processArguments[3]);
+    break;
+  case "most_loyal":
+    console.log("running the most loyal function...");
+    most_loyal();
+    break;
+  default:
+    console.log("no arguments found");
+}
 
 function getPurchases() {
   axios.get('https://driftrock-dev-test.herokuapp.com/purchases')
@@ -120,12 +138,3 @@ function most_loyal() {
     console.log(error);
   });
 }
-
-most_loyal();
-
-// totalSpend("terry_henry@doyle.io");
-// getPurchases();
-
-// TODO:
-// implement the script commands
-  // the CLI user should be able to call the functions based arguments given in the command line
